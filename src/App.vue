@@ -1,30 +1,14 @@
 <template>
+  <!-- <h1>My First Vue App!</h1> -->
   <h1>{{ title }}</h1>
-  <div v-if="showModal">
-    <Modal :header="header" :text="text" theme="sale"/>
-  </div>
-  <button @click="showModal === true">Show Modal</button>
 </template>
 
 <script>
-import Modal from './components/Modal.vue'
-
 export default {
   name: 'App',
-  components: { Modal },
   data() {
     return {
-      title: 'My First Vue App :)',
-      header: 'sign up for the Giveaway!',
-      text: 'Grab your ninja swag for half price!',
-      showModal: false
-    }
-  },
-  methods: {
-    handleClick() {
-      console.log(this.$refs.name)
-      this.$refs.name.classList.add('active')
-      this.$refs.name.focus()
+      title: 'My First Vue App!'
     }
   }
 }
